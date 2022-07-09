@@ -1,116 +1,43 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>You!</title>
-    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <!-- NAV BAR -->
-    <nav class="navigationbar">
-      <div class="logoWrapper">
-        <span class="logo">You!</span>
-      </div>
-      <ul class="navigation">
-        <li><a class="link" href="#">Home</a></li>
-        <li><a class="link" href="#">Take The Quiz</a></li>
-        <li><a class="link" href="#">Recomended</a></li>
-        <li><a class="link" href="#">Trending List</a></li>
-      </ul>
-    </nav>
-    <!-- TRENDING SECTION -->
-    <div class="Trending-section">
-      <div class="row column text-center">
-        <h2 class="subheader">Check Out What's Trending!</h2>
-      </div>
-    </div>
-    <div class="btn-group">
-      <button id="btn-1">In Theaters</button>
-      <button id="btn-2">Hot 100</button>
-      <button id="btn-3">Books</button>
-      <button id="btn-4">You've Got To Listen!</button>
-    </div>
-    <div class="small-4 large-4 columns">...</div>
-    <div class="small-4 large-4 columns">...</div>
-    <div class="small-4 large-4 columns">...</div>
-    <!-- Take the Quiz section -->
-    <br>
-    <br>
-    <div class="row medium-8 large-7 columns">
-      <div class="Quiz-section">
-        <h3>Take The Quiz!</h3>
-        <img class="thumbnail" src="https://placehold.it/850x350">
-        <div class="callout">
-          <ul class="menu simple">
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-          </ul>
-        </div>
-      </div>
-     <!--Carosul section-->
-     <div class="slideshow-container">
+    <link rel="stylesheet" href="morestyle.scss">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" 
+    integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" 
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="script.js">
+    <title>You!</title>
+</head>
+<body>
+<!--Navbar section-->
+    <section class="navbar" id="hero">
+        <nav>
+            <h2 class="logo">You<span>!</span></h2>
+            <ul>
+                <li><a href="#">Top 250</a></li>
+                <li><a href="#">Most Popular</a></li>
+                <li><a href="#">In Theaters</a></li>
+                <li><a href="#">Box Office</a></li>
+            </ul>
+        </nav>
+    </section>
+<!--Arrow Section-->
+ 
 
-      <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <img src="nirvana-logo.jpeg" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
-      
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="PearlJam-Ten2.jpg" style="width:100%">
-        <div class="text">Caption Two</div>
-      </div>
-      
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="soundgarden.jpg" style="width:100%">
-        <div class="text">Caption Three</div>
-      </div>
-      <!-- Next and previous buttons -->
-      <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
-      </div>
-      <br>
-      <!-- The dots/circles -->
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span> 
-        <span class="dot" onclick="currentSlide(2)"></span> 
-        <span class="dot" onclick="currentSlide(3)"></span> 
-      </div>
 
-<!--RECOMENDED SECTION-->
 
-      <section class="Recomended">
-        <h3>Recomended</h3>
-        <img class="thumbnail" src="">
-        <div class="outcome">
-          <ul class="List-of-recomended">
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-          </ul>
-        </div>
-      </section>
-    </div>
-    <!--Footer section-->
+<!--Footer section-->
     <footer>
-      <ul>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Codepen</a></li>
-        <li><a href="#">Email</a></li>
-        <li><a href="#">Dribbble</a></li>
-        <li><a href="#">Github</a></li>
-      </ul>
+        <div class="rounded-social-buttons">
+            <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
     </footer>
-    <!--Links-->    
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-    <script src="script.js"></script>
-    <script>$(document).foundation();</script>
-  </body>
+</body>
 </html>
-
-
-
