@@ -6,15 +6,15 @@
 }
 body {
     background: black;
+    background-image: url(Ghost.jpg);
+    background-size: cover;
+    background-position: center;
 
 }
 /***************NAVBAR***************/
 .navbar{
-    height: 100vh;
+    height: 20vh;
     width: 100%;
-    background-image: url(Ghost.jpg);
-    background-size: cover;
-    background-position: center;
 }
 nav{
     display: flex;
@@ -80,5 +80,29 @@ nav ul li a:hover{
   font-size: 25px;
 }
 
+.quizContainer {
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+footer {
+    background-color: black;
+}
 
+.quizBtn {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quizQuestionsContainer {
+    height: 50vh;
+    width: 100vh;
+    border: 3px solid red;
+    display: none;
+    top: 10vh;
+}
