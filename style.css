@@ -4,17 +4,21 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-body {
-    background: black;
 
-}
-/***************NAVBAR***************/
-.navbar{
-    height: 100vh;
-    width: 100%;
+body {
+
+    background: black;
     background-image: url(Ghost.jpg);
     background-size: cover;
     background-position: center;
+
+}
+
+/***************NAVBAR***************/
+
+.navbar{
+    height: 20vh;
+    width: 100%;
 }
 nav{
     display: flex;
@@ -45,7 +49,9 @@ nav ul li a:hover{
     transition: .4s;
     color: brown;
 }
+
 /***************FOOTER***************/
+
 .svg-inline--fa {
   vertical-align: -0.200em;
 }
@@ -80,5 +86,83 @@ nav ul li a:hover{
   font-size: 25px;
 }
 
+.quizContainer {
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+footer {
+    background-color: black;
+}
 
+/******** quiz styling *********/
+
+.quizBtn {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quizQuestionsContainer {
+    height: 50vh;
+    width: 100vh;
+    border: 3px solid red;
+    display: none;
+    top: 10vh;
+    background-color: whitesmoke;
+    position: relative;
+}
+
+.quizHeader{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: .5em;
+    color: black;
+    border: .1em solid red;
+    width: 6em;
+    height: 3em; 
+    text-align: center;
+    background-color: red;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-radius: .3em;
+}
+ 
+.qHeadTxt {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+ hr.quizHr{
+    border: 1px solid black;
+    margin-right: 2em;
+    margin-left: 2em;
+} 
+
+#question{
+    justify-content: center;
+    display: flex;
+    margin-top: 1em;
+ 
+}
+.next {
+    border-radius: 30px;
+    color: white;
+    background-color: red;
+    height: 2em;
+    width: 4em;
+    justify-items: center;
+    position: absolute;
+    bottom: .5em;
+    right: 0;
+    left: 0;
+    margin: auto;    
+}
