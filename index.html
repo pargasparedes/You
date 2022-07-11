@@ -16,7 +16,7 @@
         <nav>
             <h2 class="logo">You<span>!</span></h2>
             <ul>
-                <li><a href="#">Top 250</a></li>
+                <li><a href="#" id="topTwoFifty">Top 250</a></li>
                 <li><a href="#">Most Popular</a></li>
                 <li><a href="#">In Theaters</a></li>
                 <li><a href="#">Box Office</a></li>
@@ -25,7 +25,7 @@
     </section>
 <!--Arrow Section-->
  
-    <section class="quizContainer">
+    <section class="quizContainer" id="quizContainer">
         <div class="quizBtn" id="quizBtn">
             <button class="startBtn" id="startBtn">Start Quiz</button>
         </div>
@@ -33,6 +33,61 @@
         <div class="quizQuestionsContainer" id="quizQuestionsContainer">
 
         </div>
+    </section>
+
+    <!-- Temporary section for showing top 10 movies out of the 250 movies -->
+    <section class="temporary" id="temporary">
+
+<!-- Slideshow container -->
+<div class="slideshow-container fade">
+
+    <!-- Full images with numbers and message Info -->
+    <div class="Containers">
+      <div class="MessageInfo">1 / 3</div>
+      <img id="firstMovie" src="" style="width:auto; height: 580px;">
+      <div class="Info">First place in Top 250</div>
+    </div>
+  
+    <div class="Containers">
+      <div class="MessageInfo">2 / 3</div>
+      <img id="secondMovie" src="" style="width:auto; height: 580px;">
+      <div class="Info">Second place in Top 250</div>
+    </div>
+  
+    <div class="Containers">
+      <div class="MessageInfo">3 / 3</div>
+      <img id="thirdMovie" src="" style="width:auto; height: 580px;">
+      <div class="Info">Third place in Top 250</div>
+    </div>
+  
+    <!-- Back and forward buttons -->
+    <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The circles/dots -->
+  <div style="text-align:center">
+    <span class="dots" onclick="currentSlide(1)"></span>
+    <span class="dots" onclick="currentSlide(2)"></span>
+    <span class="dots" onclick="currentSlide(3)"></span>
+  </div> 
+
+
+        <!-- <div class="list">
+            <ol>
+                <li id="firstMovie"></li>
+                <li id="secondMovie"></li>
+                <li id="thirdMovie"></li>
+                <li id="fourthMovie"></li>
+                <li id="fifthMovie"></li>
+                <li id="sixthMovie"></li>
+                <li id="seventhMovie"></li>
+                <li id="eigthMovie"></li>
+                <li id="ninethMovie"></li>
+                <li id="tenthMovie"></li>
+            </ol>
+        </div> -->
     </section>
 
 
