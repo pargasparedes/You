@@ -4,6 +4,8 @@ $(".startBtn").click(function(){
     document.getElementById("quizQuestionsContainer").style.display = "block";
 });
 
+
+
 // Hiding middle section to show top 10 list
 $("#topTwoFifty").click(function(){
     document.getElementById("quizBtn").style.display = "none";
@@ -12,8 +14,16 @@ $("#topTwoFifty").click(function(){
 
 });
 
+// Hiding middle section to show In Theaters list
+$("#inTheatersBtn").click(function(){
+    document.getElementById("quizBtn").style.display = "none";
+    document.getElementById("quizContainer").style.display = "none";
+    document.getElementById("inTheaters").style.display = "block";
+
+});
 
 
+// -------Top 10 SlideShow Function and API calls for them-------- Start
 var slidePosition = 1;
 SlideShow(slidePosition);
 
@@ -55,4 +65,28 @@ fetch('https://imdb-api.com/en/API/Top250Movies/k_2s1d2j41')
   slides[slidePosition-1].style.display = "flex";
   circles[slidePosition-1].className += " enable";
 } 
+// -------Top 10 SlideShow Function and API calls for them-------- End
 
+
+
+
+
+// -------In Theaters API Call and function to send titles to list-------- Start
+fetch ('https://imdb-api.com/en/API/InTheaters/k_2s1d2j41')
+.then(function (response){
+    return response.json();
+})
+.then(function (data){
+    console.log(data);
+    $("#firstMovieTheaters").text(data.items[0].title);
+    $("#secondMovieTheaters").text(data.items[1].title);
+    $("#thirdMovieTheaters").text(data.items[2].title);
+    $("#fourthMovieTheaters").text(data.items[3].title);
+    $("#fifthMovieTheaters").text(data.items[4].title);
+    $("#sixthMovieTheaters").text(data.items[5].title);
+    $("#seventhMovieTheaters").text(data.items[6].title);
+    $("#eigthMovieTheaters").text(data.items[7].title);
+    $("#ninethMovieTheaters").text(data.items[8].title);
+    $("#tenthMovieTheaters").text(data.items[9].title);
+});
+// -------In Theaters API Call and function to send titles to list-------- End

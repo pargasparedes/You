@@ -216,3 +216,17 @@ footer {
   from {opacity: .5}
   to {opacity: 2}
 }
+
+/* Styling In Theaters Section */
+.inTheaters {
+    height: 75vh;
+    display: none;
+    justify-content: center;
+}
+
+.listTheaters {
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: gray;
+}
