@@ -10,14 +10,42 @@ $(".startBtn").click(function(){
 $("#topTwoFifty").click(function(){
     document.getElementById("quizBtn").style.display = "none";
     document.getElementById("quizContainer").style.display = "none";
+    document.getElementById("mostPopular").style.display = "none";
+    document.getElementById("boxOffice").style.display = "none";
+    document.getElementById("inTheaters").style.display = "none";
     document.getElementById("temporary").style.display = "block";
 
 });
 
+// Hiding middle section to show Most Popular list
+$("#mostPopularBtn").click(function(){
+    document.getElementById("quizBtn").style.display = "none";
+    document.getElementById("quizContainer").style.display = "none";
+    document.getElementById("temporary").style.display = "none";
+    document.getElementById("boxOffice").style.display = "none";
+    document.getElementById("inTheaters").style.display = "none";
+    document.getElementById("mostPopular").style.display = "block";
+
+});
+
 // Hiding middle section to show In Theaters list
+$("#boxOfficeBtn").click(function(){
+    document.getElementById("quizBtn").style.display = "none";
+    document.getElementById("quizContainer").style.display = "none";
+    document.getElementById("temporary").style.display = "none";
+    document.getElementById("mostPopular").style.display = "none";
+    document.getElementById("inTheaters").style.display = "none";
+    document.getElementById("boxOffice").style.display = "block";
+
+});
+
+// Hiding middle section to show Box Office list
 $("#inTheatersBtn").click(function(){
     document.getElementById("quizBtn").style.display = "none";
     document.getElementById("quizContainer").style.display = "none";
+    document.getElementById("temporary").style.display = "none";
+    document.getElementById("mostPopular").style.display = "none";
+    document.getElementById("boxOffice").style.display = "none";
     document.getElementById("inTheaters").style.display = "block";
 
 });
@@ -40,7 +68,7 @@ function currentSlide(n) {
 function SlideShow(n) {
 
 // Calling API for top 250 movies
-fetch('https://imdb-api.com/en/API/Top250Movies/k_2s1d2j41')
+fetch('https://imdb-api.com/en/API/Top250Movies/k_u0gzcze1', {cache:"force-cache"})
 .then(function (response) {
   return response.json();
 })
@@ -70,14 +98,32 @@ fetch('https://imdb-api.com/en/API/Top250Movies/k_2s1d2j41')
 
 
 
-
-// -------In Theaters API Call and function to send titles to list-------- Start
-fetch ('https://imdb-api.com/en/API/InTheaters/k_2s1d2j41')
+// -------Most Popular API Call and function to send titles to list-------- Start
+fetch ('https://imdb-api.com/en/API/MostPopularMovies/k_u0gzcze1', {cache:"force-cache"})
 .then(function (response){
     return response.json();
 })
 .then(function (data){
-    console.log(data);
+    $("#firstMoviePopular").text(data.items[0].title);
+    $("#secondMoviePopular").text(data.items[1].title);
+    $("#thirdMoviePopular").text(data.items[2].title);
+    $("#fourthMoviePopular").text(data.items[3].title);
+    $("#fifthMoviePopular").text(data.items[4].title);
+    $("#sixthMoviePopular").text(data.items[5].title);
+    $("#seventhMoviePopular").text(data.items[6].title);
+    $("#eigthMoviePopular").text(data.items[7].title);
+    $("#ninethMoviePopular").text(data.items[8].title);
+    $("#tenthMoviePopular").text(data.items[9].title);
+});
+// -------Most Popular API Call and function to send titles to list-------- End
+
+
+// -------In Theaters API Call and function to send titles to list-------- Start
+fetch ('https://imdb-api.com/en/API/InTheaters/k_u0gzcze1', {cache:"force-cache"})
+.then(function (response){
+    return response.json();
+})
+.then(function (data){
     $("#firstMovieTheaters").text(data.items[0].title);
     $("#secondMovieTheaters").text(data.items[1].title);
     $("#thirdMovieTheaters").text(data.items[2].title);
@@ -90,3 +136,24 @@ fetch ('https://imdb-api.com/en/API/InTheaters/k_2s1d2j41')
     $("#tenthMovieTheaters").text(data.items[9].title);
 });
 // -------In Theaters API Call and function to send titles to list-------- End
+
+
+// -------Box Office API Call and function to send titles to list-------- Start
+fetch ('https://imdb-api.com/en/API/BoxOffice/k_u0gzcze1', {cache:"force-cache"})
+.then(function (response){
+    return response.json();
+})
+.then(function (data){
+    console.log(data);
+    $("#firstBoxOffice").text(data.items[0].title);
+    $("#secondBoxOffice").text(data.items[1].title);
+    $("#thirdBoxOffice").text(data.items[2].title);
+    $("#fourthBoxOffice").text(data.items[3].title);
+    $("#fifthBoxOffice").text(data.items[4].title);
+    $("#sixthBoxOffice").text(data.items[5].title);
+    $("#seventhBoxOffice").text(data.items[6].title);
+    $("#eigthBoxOffice").text(data.items[7].title);
+    $("#ninethBoxOffice").text(data.items[8].title);
+    $("#tenthBoxOffice").text(data.items[9].title);
+});
+// -------Box Office API Call and function to send titles to list-------- End
