@@ -10,6 +10,9 @@ $(".startBtn").click(function(){
 $("#topTwoFifty").click(function(){
     document.getElementById("quizBtn").style.display = "none";
     document.getElementById("quizContainer").style.display = "none";
+    document.getElementById("mostPopular").style.display = "none";
+    document.getElementById("boxOffice").style.display = "none";
+    document.getElementById("inTheaters").style.display = "none";
     document.getElementById("temporary").style.display = "block";
 
 });
@@ -18,6 +21,9 @@ $("#topTwoFifty").click(function(){
 $("#mostPopularBtn").click(function(){
     document.getElementById("quizBtn").style.display = "none";
     document.getElementById("quizContainer").style.display = "none";
+    document.getElementById("temporary").style.display = "none";
+    document.getElementById("boxOffice").style.display = "none";
+    document.getElementById("inTheaters").style.display = "none";
     document.getElementById("mostPopular").style.display = "block";
 
 });
@@ -26,6 +32,9 @@ $("#mostPopularBtn").click(function(){
 $("#boxOfficeBtn").click(function(){
     document.getElementById("quizBtn").style.display = "none";
     document.getElementById("quizContainer").style.display = "none";
+    document.getElementById("temporary").style.display = "none";
+    document.getElementById("mostPopular").style.display = "none";
+    document.getElementById("inTheaters").style.display = "none";
     document.getElementById("boxOffice").style.display = "block";
 
 });
@@ -34,6 +43,9 @@ $("#boxOfficeBtn").click(function(){
 $("#inTheatersBtn").click(function(){
     document.getElementById("quizBtn").style.display = "none";
     document.getElementById("quizContainer").style.display = "none";
+    document.getElementById("temporary").style.display = "none";
+    document.getElementById("mostPopular").style.display = "none";
+    document.getElementById("boxOffice").style.display = "none";
     document.getElementById("inTheaters").style.display = "block";
 
 });
