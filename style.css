@@ -230,3 +230,17 @@ footer {
     color: white;
     background-color: gray;
 }
+
+/* Styling Most Popular Section */
+.mostPopular {
+    height: 75vh;
+    display: none;
+    justify-content: center;
+}
+
+.listPopular {
+    display: flex;
+    justify-content: center;
+    color: black;
+    background-color: lightcyan;
+}

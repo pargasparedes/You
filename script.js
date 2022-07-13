@@ -14,6 +14,14 @@ $("#topTwoFifty").click(function(){
 
 });
 
+// Hiding middle section to show Most Popular list
+$("#mostPopularBtn").click(function(){
+    document.getElementById("quizBtn").style.display = "none";
+    document.getElementById("quizContainer").style.display = "none";
+    document.getElementById("mostPopular").style.display = "block";
+
+});
+
 // Hiding middle section to show In Theaters list
 $("#inTheatersBtn").click(function(){
     document.getElementById("quizBtn").style.display = "none";
@@ -40,7 +48,7 @@ function currentSlide(n) {
 function SlideShow(n) {
 
 // Calling API for top 250 movies
-fetch('https://imdb-api.com/en/API/Top250Movies/k_2s1d2j41')
+fetch('https://imdb-api.com/en/API/Top250Movies/k_u0gzcze1', {cache:"force-cache"})
 .then(function (response) {
   return response.json();
 })
@@ -70,14 +78,36 @@ fetch('https://imdb-api.com/en/API/Top250Movies/k_2s1d2j41')
 
 
 
-
-// -------In Theaters API Call and function to send titles to list-------- Start
-fetch ('https://imdb-api.com/en/API/InTheaters/k_2s1d2j41')
+// -------Most Popular API Call and function to send titles to list-------- Start
+fetch ('https://imdb-api.com/en/API/MostPopularMovies/k_u0gzcze1', {cache:"force-cache"})
 .then(function (response){
     return response.json();
 })
 .then(function (data){
     console.log(data);
+    $("#firstMoviePopular").text(data.items[0].title);
+    $("#secondMoviePopular").text(data.items[1].title);
+    $("#thirdMoviePopular").text(data.items[2].title);
+    $("#fourthMoviePopular").text(data.items[3].title);
+    $("#fifthMoviePopular").text(data.items[4].title);
+    $("#sixthMoviePopular").text(data.items[5].title);
+    $("#seventhMoviePopular").text(data.items[6].title);
+    $("#eigthMoviePopular").text(data.items[7].title);
+    $("#ninethMoviePopular").text(data.items[8].title);
+    $("#tenthMoviePopular").text(data.items[9].title);
+});
+// -------Most Popular API Call and function to send titles to list-------- End
+
+
+
+
+
+// -------In Theaters API Call and function to send titles to list-------- Start
+fetch ('https://imdb-api.com/en/API/InTheaters/k_u0gzcze1', {cache:"force-cache"})
+.then(function (response){
+    return response.json();
+})
+.then(function (data){
     $("#firstMovieTheaters").text(data.items[0].title);
     $("#secondMovieTheaters").text(data.items[1].title);
     $("#thirdMovieTheaters").text(data.items[2].title);
