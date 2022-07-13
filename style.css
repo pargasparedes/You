@@ -244,3 +244,17 @@ footer {
     color: black;
     background-color: lightcyan;
 }
+
+/* Styling Box Office Section */
+.boxOffice {
+    height: 75vh;
+    display: none;
+    justify-content: center;
+}
+
+.listOffice {
+    display: flex;
+    justify-content: center;
+    color: navy;
+    background-color: lightpink;
+}

@@ -23,6 +23,14 @@ $("#mostPopularBtn").click(function(){
 });
 
 // Hiding middle section to show In Theaters list
+$("#boxOfficeBtn").click(function(){
+    document.getElementById("quizBtn").style.display = "none";
+    document.getElementById("quizContainer").style.display = "none";
+    document.getElementById("boxOffice").style.display = "block";
+
+});
+
+// Hiding middle section to show Box Office list
 $("#inTheatersBtn").click(function(){
     document.getElementById("quizBtn").style.display = "none";
     document.getElementById("quizContainer").style.display = "none";
@@ -84,7 +92,6 @@ fetch ('https://imdb-api.com/en/API/MostPopularMovies/k_u0gzcze1', {cache:"force
     return response.json();
 })
 .then(function (data){
-    console.log(data);
     $("#firstMoviePopular").text(data.items[0].title);
     $("#secondMoviePopular").text(data.items[1].title);
     $("#thirdMoviePopular").text(data.items[2].title);
@@ -97,9 +104,6 @@ fetch ('https://imdb-api.com/en/API/MostPopularMovies/k_u0gzcze1', {cache:"force
     $("#tenthMoviePopular").text(data.items[9].title);
 });
 // -------Most Popular API Call and function to send titles to list-------- End
-
-
-
 
 
 // -------In Theaters API Call and function to send titles to list-------- Start
@@ -120,3 +124,24 @@ fetch ('https://imdb-api.com/en/API/InTheaters/k_u0gzcze1', {cache:"force-cache"
     $("#tenthMovieTheaters").text(data.items[9].title);
 });
 // -------In Theaters API Call and function to send titles to list-------- End
+
+
+// -------Box Office API Call and function to send titles to list-------- Start
+fetch ('https://imdb-api.com/en/API/BoxOffice/k_u0gzcze1', {cache:"force-cache"})
+.then(function (response){
+    return response.json();
+})
+.then(function (data){
+    console.log(data);
+    $("#firstBoxOffice").text(data.items[0].title);
+    $("#secondBoxOffice").text(data.items[1].title);
+    $("#thirdBoxOffice").text(data.items[2].title);
+    $("#fourthBoxOffice").text(data.items[3].title);
+    $("#fifthBoxOffice").text(data.items[4].title);
+    $("#sixthBoxOffice").text(data.items[5].title);
+    $("#seventhBoxOffice").text(data.items[6].title);
+    $("#eigthBoxOffice").text(data.items[7].title);
+    $("#ninethBoxOffice").text(data.items[8].title);
+    $("#tenthBoxOffice").text(data.items[9].title);
+});
+// -------Box Office API Call and function to send titles to list-------- End
