@@ -23,8 +23,9 @@ nav {
   padding-left: 10%;
   padding-right: 10%;
 }
-.logo {
+.logo a{
   color: aliceblue;
+  text-decoration: none;
   font-size: 29px;
 }
 span {
@@ -255,10 +256,10 @@ footer {
 }
 
 .popularList {
-  display: grid;
-  grid-template-columns: 256px 256px 256px 256px;
+  display: none;
+  grid-template-columns: 256px 256px 256px 256px 256px;
   /* width: auto; height: 580px */
-  grid-template-rows: 352px 352px 352px 352px;
+  grid-template-rows: 352px 352px;
   column-gap: 40px;
   row-gap: 40px;
   justify-items: space-evenly;

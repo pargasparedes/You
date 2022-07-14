@@ -22,6 +22,7 @@ $("#mostPopularBtn").click(function () {
   document.getElementById("boxOffice").style.display = "none";
   document.getElementById("inTheaters").style.display = "none";
   document.getElementById("mostPopular").style.display = "block";
+  document.getElementById("pupularList").style.display = "grid";
 });
 
 // Hiding middle section to show In Theaters list
