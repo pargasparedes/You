@@ -1,82 +1,89 @@
 const startBtn = document.getElementById("start");
-let question = document.getElementById("question");
-const next = document.getElementById('next')[0];
+let question = $("#question");
+var value_array = [];
 
-//  class Question {
-//      constructor(question, choices){
-//          this.question = question;
-//          this.choices = choices;
-//          console.log(choices);
-//      }
-    
-//  }
-//***** Hides Start button and displays quiz ***** 
+//***** Hides Start button and displays quiz *****
+
 $(".startBtn").click(function(){
     document.getElementById("quizBtn").style.display = "none";
     document.getElementById("quizQuestionsContainer").style.display = "block";
-    // setNextQuestion()
+    renderQuestion();
 });
-// ***** Questions Array *****
+
+// ***** Questions Array ****
 let currentQuestion = {}
 let availableQuestions = []
-let genres = ['horror', 'comedy', 'documentary', 'drama',]
-let years = ['2010', '2000',]
+let genres = ['horror', 'comedy', 'documentary', 'drama', 
+    'family', 'fantasy', 'history', 'mystery', 'sci-fi', 'thriller']
+let years = ['2010', '2000', '1990', '1980', '1970', '1960', '1950', '1940', '1930', '1920', '1910', '1900']
+let MPAA = ['G', 'PG', 'PG-13', 'R']
+let option = []
 let questions = [
     {
         question: 'What genre would you be interested in?', 
-        options: genres 
+        option: genres 
     },
 
     { 
         question: 'Are you interested in a certain age of movies?',
-        options: years
+        option: years
     },
        
     {
-        question: 'Select all MPAA rating range G-R that you would like.'
-    },
-]
+        question: 'Select all MPAA rating range G-R that you would like.',
+        option: MPAA,
+    }
+
+] // end questions array
    
 //***** Next button *****
-$('.next').click(function(){ 
-   
-    
-    //console.log("NEXT QUESTION");
+$('.next').click(function(event){ 
+event.stopPropagation();
+event.preventDefault();
+
+    if (runnungQuestion < questions.length - 1){
+        runnungQuestion++;
+        renderQuestion();
+    }
+    else {
+        document.getElementById("quizQuestionsContainer").style.display = "none";
+        //TODO collect quiz responses (value_array) here
+        console.log(value_array);
+    }
  })
 
 //***** Shows Question to html *****
-const lastQuestion = questions.length - 1;
-let runnungQuestion = 0;
+ const lastQuestion = questions.length - 1;
+ let runnungQuestion = 0;
 
 function renderQuestion(){
+    question.empty();
+    //console.log('we are here');
     let q = questions[runnungQuestion];
-    
+    question.append(q.question);
      question.innerHTML = "<p>" + q.question + "</p>";
-     // todo:
-     // 1. Create an html parent element to hold all the checkboxes
-     var parent = document.createElement("div");
-     // 2. inside the forEach loop createa checkbox for the curent option and add it to the parent element
-        q.options.forEach(function(options){
-            var checkbox = document.createElement("input");
-            checkbox.type = "checkbox";
-            checkbox.value = options;
-            checkbox.name = "question";
-            checkbox.id = options;
-            parent.appendChild(checkbox);
-            var label = document.createElement("label");
-            label.htmlFor = options;
-            label.appendChild(document.createTextNode(options));
-            parent.appendChild(label);
-     // 3. After ( outside ) of the forEach loop append the parent element to the question elemnent
-            question.appendChild(parent);
-     // possible next actions:
-     // 1. might need event handlers and delegates
-     // 2. storing user selection for easy access
-    //  q.options.forEach(option => {
-    //     console.log('Current option for which we need to create a checkbox! ',option)
-    // }); 
+ // end renderQuestion
+ 
+//***** */ Create an html parent element to hold all the checkboxes *****
+var parent = $("<div>")
 
-//}
-renderQuestion();
-}); // end of renderQuestion()
+//***** */ inside the forEach loop create a checkbox for the curent option and add it to the parent element *****
+    q.option.forEach(function(option){     
+    $('<input />', { type: 'checkbox', id: 'cb'+option, value: option }).appendTo(parent);
+    $('<label />', { 'for': 'cb'+option, text: option }).appendTo(parent);
+
+    });
+    question.append(parent);
 }
+//***** gets value from check boxes *****
+ $(document).ready(function() {
+     value_array = [];
+    
+     $(document).on("change", "input[type='checkbox']", function() {
+         var $this = $(this),
+            value = $this.val();
+    
+         value_array.push( value );
+    
+    });
+    });
