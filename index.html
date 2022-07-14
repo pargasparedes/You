@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" 
+    integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" 
+    crossorigin="anonymous"></script>
+    <title>You!</title>
+</head>
+<body>
+
+
+
+<!--Navbar section-->
+    <section class="navbar" id="hero">
+        <nav>
+            <h2 class="logo">You<span>!</span></h2>
+            <ul>
+                <li><a href="#" id="topTwoFifty">Top 250</a></li>
+                <li><a href="#" id="mostPopularBtn">Most Popular</a></li>
+                <li><a href="#" id="inTheatersBtn">In Theaters</a></li>
+                <li><a href="#" id="boxOfficeBtn">Box Office</a></li>
+            </ul>
+        </nav>
+    </section>
+
+
+
+    
+<!--Arrow Section-->
+ 
+    <section class="quizContainer" id="quizContainer">
+        <div class="quizBtn" id="quizBtn">
+            <button class="startBtn" id="startBtn">Start Quiz</button>
+        </div>
+
+        <div class="quizQuestionsContainer" id="quizQuestionsContainer">
+
+        </div>
+    </section>
+
+
+
+
+
+<!-- Temporary section for showing top 10 movies out of the 250 movies -->
+    <section class="temporary" id="temporary">
+
+<!-- Slideshow container -->
+<div class="slideshow-container fade">
+
+    <!-- Full images with numbers and message Info -->
+    <div class="Containers">
+      <div class="MessageInfo">1 / 3</div>
+      <img id="firstMovie" src="" style="width:auto; height: 580px;">
+      <div class="Info">First place in Top 250</div>
+    </div>
+  
+    <div class="Containers">
+      <div class="MessageInfo">2 / 3</div>
+      <img id="secondMovie" src="" style="width:auto; height: 580px;">
+      <div class="Info">Second place in Top 250</div>
+    </div>
+  
+    <div class="Containers">
+      <div class="MessageInfo">3 / 3</div>
+      <img id="thirdMovie" src="" style="width:auto; height: 580px;">
+      <div class="Info">Third place in Top 250</div>
+    </div>
+  
+    <!-- Back and forward buttons -->
+    <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The circles/dots -->
+  <div style="text-align:center">
+    <span class="dots" onclick="currentSlide(1)"></span>
+    <span class="dots" onclick="currentSlide(2)"></span>
+    <span class="dots" onclick="currentSlide(3)"></span>
+  </div> 
+    </section>
+
+
+
+<!-- Most Popular Section -->
+<section class="mostPopular" id="mostPopular">
+    <div class="listPopular">
+        <ol>
+            <li id="firstMoviePopular"></li>
+            <li id="secondMoviePopular"></li>
+            <li id="thirdMoviePopular"></li>
+            <li id="fourthMoviePopular"></li>
+            <li id="fifthMoviePopular"></li>
+            <li id="sixthMoviePopular"></li>
+            <li id="seventhMoviePopular"></li>
+            <li id="eigthMoviePopular"></li>
+            <li id="ninethMoviePopular"></li>
+            <li id="tenthMoviePopular"></li>
+        </ol>
+    </div>
+</section>
+
+
+
+<!-- In Theaters Section -->
+    <section class="inTheaters" id="inTheaters">
+        <div class="listTheaters">
+            <h1>In Theaters</h1>
+            <ul>
+                <li id="firstMovieTheaters"></li>
+                <hr />
+                <li id="secondMovieTheaters"></li>
+                <hr />
+                <li id="thirdMovieTheaters"></li>
+                <hr />
+                <li id="fourthMovieTheaters"></li>
+                <hr />
+                <li id="fifthMovieTheaters"></li>
+                <li id="sixthMovieTheaters"></li>
+                <hr />
+                <li id="seventhMovieTheaters"></li>
+                <hr />
+                <li id="eigthMovieTheaters"></li>
+                <hr />
+                <li id="ninethMovieTheaters"></li>
+                <hr />
+                <li id="tenthMovieTheaters"></li>
+            </ul>
+        </div>
+    </section>
+
+
+<!-- Box Office Section -->
+<section class="boxOffice" id="boxOffice">
+    <div class="listOffice">
+        <h2>Box Office</h2>
+        <ol>
+            <li id="firstBoxOffice"></li>
+            <hr />
+            <li id="secondBoxOffice"></li>
+            <hr />
+            <li id="thirdBoxOffice"></li>
+            <hr />
+            <li id="fourthBoxOffice"></li>
+            <hr />
+            <li id="fifthBoxOffice"></li>
+            <li id="sixthBoxOffice"></li>
+            <hr />
+            <li id="seventhBoxOffice"></li>
+            <hr />
+            <li id="eigthBoxOffice"></li>
+            <hr />
+            <li id="ninethBoxOffice"></li>
+            <hr />
+            <li id="tenthBoxOffice"></li>
+        </ol>
+    </div>
+</section>
+
+
+<!--Footer section-->
+    <footer>
+        <div class="rounded-social-buttons">
+            <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
