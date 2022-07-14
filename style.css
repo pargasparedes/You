@@ -1,53 +1,52 @@
-*{
-    Padding: 0;
-    margin: 0;
-    /* box-sizing: border-box; */
-    font-family: sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  /* box-sizing: border-box; */
+  font-family: sans-serif;
 }
 body {
-    background: black;
-    background-image: url(Ghost.jpg);
-    background-size: cover;
-    background-position: center;
-
+  background: black;
+  background-image: url(Ghost.jpg);
+  background-size: cover;
+  background-position: center;
 }
 /***************NAVBAR***************/
-.navbar{
-    height: 20vh;
-    width: 100%;
+.navbar {
+  height: 20vh;
+  width: 100%;
 }
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 40px;
-    padding-left: 10%;
-    padding-right: 10%;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
-.logo{
-    color: aliceblue;
-    font-size: 29px;
+.logo {
+  color: aliceblue;
+  font-size: 29px;
 }
-span{
-    color:red;
+span {
+  color: red;
 }
-nav ul li{
-    list-style-type: none;
-    display: inline-block;
-    padding: 10px 22px;
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 22px;
 }
-nav ul li a{
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
-nav ul li a:hover{
-    transition: .4s;
-    color: brown;
+nav ul li a:hover {
+  transition: 0.4s;
+  color: brown;
 }
 /***************FOOTER***************/
 .svg-inline--fa {
-  vertical-align: -0.200em;
+  vertical-align: -0.2em;
 }
 .rounded-social-buttons {
   text-align: center;
@@ -71,54 +70,55 @@ nav ul li a:hover{
   margin-right: 0.25rem;
   margin-bottom: 0.25rem;
 }
-.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+.rounded-social-buttons .social-button:hover,
+.rounded-social-buttons .social-button:focus {
   -webkit-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-          transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
-.rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube {
+.rounded-social-buttons .fa-twitter,
+.fa-facebook-f,
+.fa-linkedin,
+.fa-youtube {
   font-size: 25px;
 }
 
 .quizContainer {
-    height: 75vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
-    background-color: black;
+  background-color: black;
 }
 
 .quizBtn {
-    height: 200px;
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .quizQuestionsContainer {
-    height: 50vh;
-    width: 100vh;
-    border: 3px solid red;
-    display: none;
-    top: 10vh;
+  height: 50vh;
+  width: 100vh;
+  border: 3px solid red;
+  display: none;
+  top: 10vh;
 }
 
 .temporary {
-    height: 75vh;
-    display: none;
+  height: 75vh;
+  display: none;
 }
 
 .list {
-    background-color: rgba(191, 201, 202, 0.5);
-    border: 3px solid red;
+  background-color: rgba(191, 201, 202, 0.5);
+  border: 3px solid red;
 }
-
-
-
 
 /* * {box-sizing:border-box} */
 
@@ -136,7 +136,8 @@ footer {
 }
 
 /* forward & Back buttons */
-.Back, .forward {
+.Back,
+.forward {
   cursor: pointer;
   position: absolute;
   top: 48%;
@@ -159,8 +160,9 @@ footer {
 }
 
 /*when the user hovers,add a black background with some little opacity */
-.Back:hover, .forward:hover {
-  background-color: rgba(0,0,0,0.8);
+.Back:hover,
+.forward:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption Info */
@@ -195,7 +197,8 @@ footer {
   transition: background-color 0.5s ease;
 }
 
-.enable, .dots:hover {
+.enable,
+.dots:hover {
   background-color: #717161;
 }
 
@@ -208,38 +211,59 @@ footer {
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .5}
-  to {opacity: 2}
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 2;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .5}
-  to {opacity: 2}
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 2;
+  }
 }
 
 /* Styling In Theaters Section */
 .inTheaters {
-    height: 75vh;
-    display: none;
-    justify-content: center;
+  height: 75vh;
+  display: none;
+  justify-content: center;
 }
 
 .listTheaters {
-    display: flex;
-    flex-direction: column;
-    max-width: fit-content;
-    justify-content: center;
-    color: white;
-    background-color: black;
-    opacity: 75%;
-    border-style: solid;
-    border-width: 1px;
-    border-color: blueviolet;
-    border-radius: 25px;
-    font-size: 20px;
-    font-weight: lighter;
-    margin: auto;
-    margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  background-color: black;
+  opacity: 75%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: blueviolet;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: lighter;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.popularList {
+  display: grid;
+  grid-template-columns: 256px 256px 256px 256px;
+  /* width: auto; height: 580px */
+  grid-template-rows: 352px 352px 352px 352px;
+  column-gap: 40px;
+  row-gap: 40px;
+  justify-items: space-evenly;
+  justify-content: space-evenly;
+  backdrop-filter: blur(15px);
 }
 
 ul {
@@ -257,10 +281,8 @@ hr {
 }
 
 h1 {
-margin: auto;
-
+  margin: auto;
 }
-
 
 .boxOffice {
   height: 75vh;
