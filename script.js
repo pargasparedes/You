@@ -14,8 +14,8 @@ $(".startBtn").click(function(){
 let currentQuestion = {}
 let availableQuestions = []
 let genres = ['horror', 'comedy', 'documentary', 'drama', 
-    'family', 'fantasy', 'history', 'mystery', 'sci-fi', 'thriller']
-let years = ['2010', '2000', '1990', '1980', '1970', '1960', '1950', '1940', '1930', '1920', '1910', '1900']
+'action ', 'adventure', 'animation', 'biography', 'family', 'fantasy', 'history', 'mystery', 'sci-fi', 'thriller']
+let years = ['2010', '2000', '199', '1980', '1970', '1960', '1950', '1940', '1930', '1920', '1910', '1900']
 let MPAA = ['G', 'PG', 'PG-13', 'R']
 let option = []
 let questions = [
@@ -58,7 +58,6 @@ event.preventDefault();
 
 function renderQuestion(){
     question.empty();
-    //console.log('we are here');
     let q = questions[runnungQuestion];
     question.append(q.question);
      question.innerHTML = "<p>" + q.question + "</p>";
@@ -69,7 +68,9 @@ var parent = $("<div>")
 
 //***** */ inside the forEach loop create a checkbox for the curent option and add it to the parent element *****
     q.option.forEach(function(option){     
-    $('<input />', { type: 'checkbox', id: 'cb'+option, value: option }).appendTo(parent);
+    $('<input />', { type: 'checkbox', id: 'cb'+option,
+    
+    value: option }).appendTo(parent);
     $('<label />', { 'for': 'cb'+option, text: option }).appendTo(parent);
 
     });
@@ -83,7 +84,7 @@ var parent = $("<div>")
          var $this = $(this),
             value = $this.val();
     
-         value_array.push( value );
+         value_array.push(value);
     
     });
     });
