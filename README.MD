@@ -40,3 +40,5 @@ Box Office -
 Here
 
 REPO-----> https://github.com/pargasparedes/Project
+
+GITHUB PAGES------> https://pargasparedes.github.io/Project/ 
