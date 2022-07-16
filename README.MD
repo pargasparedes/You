@@ -19,7 +19,7 @@ The questions are easy, just a simple list of likes and dislikes to help us rela
 
 -----LINKS-----
 
-There are also links on the top of the home page for all you peaple that just want to dive right in and not take the quiz. Such as..
+There are also links on the top of the home page for all you people that just want to dive right in and not take the quiz. Such as..
 
 Top 250 -
 
