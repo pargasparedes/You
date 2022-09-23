@@ -270,3 +270,75 @@
     <script src="script.js"></script>
   </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" 
+    integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" 
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="script.js">
+    <title>You!</title>
+</head>
+<body>
+<!--Navbar section-->
+    <section class="navbar" id="hero">
+        <nav>
+            <h2 class="logo">You<span>!</span></h2>
+            <ul>
+                <li><a href="#">Top 250</a></li>
+                <li><a href="#">Most Popular</a></li>
+                <li><a href="#">In Theaters</a></li>
+                <li><a href="#">Box Office</a></li>
+            </ul>
+        </nav>
+    </section>
+
+<!--Arrow Section-->
+<section class="quizContainer">
+    <div class="quizBtn" id="quizBtn">
+        <button class="startBtn" id="startBtn">Start Quiz</button>
+        
+    </div>
+
+    <div class="quizQuestionsContainer" id="quizQuestionsContainer">
+        <div class="quizHeader">
+            <p class="qHeadTxt">Take the quiz!</p>
+            
+            
+        </div>
+
+        <hr class="quizHr">
+        <div id="question"><p></p></div>
+        <div><button class="next" id="next">Next</button></div>
+        <!-- <button class="endBtn" id="endBtn">End</button> -->
+    </div>
+    
+</section>
+
+<!--carousel section-->
+<section id="movie-details-container">
+  <div class="movie-image-container" style="background: rgba(0, 0, 0, 0) url('') repeat scroll 0% 0%;"></div>
+  <div class="movie-title-container" title=""><h2>loading</h2></div>
+  <div class="movie-subdetails-container">
+      <p class="movie-MPAA"style="display: block;">loading</p>
+      <p class="movie-genre" style="display: block;">loading</p>
+  </div>
+  <button id="shuffle-button">Shuffle</button>
+</section>
+<!--Footer section-->
+    <footer>
+        <div class="rounded-social-buttons">
+            <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>   
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="script.js"></script> 
+</body>

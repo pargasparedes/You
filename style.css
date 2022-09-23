@@ -326,3 +326,199 @@ hr {
 h2 {
   margin: auto;
 }
+*{
+  Padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+
+  background: black;
+  background-image: url(Ghost.jpg);
+  background-size: cover;
+  background-position: center;
+
+}
+
+/***************NAVBAR***************/
+
+.navbar{
+  height: 20vh;
+  width: 100%;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.logo{
+  color: aliceblue;
+  font-size: 29px;
+}
+span{
+  color:red;
+}
+nav ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 22px;
+}
+nav ul li a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li a:hover{
+  transition: .4s;
+  color: brown;
+}
+
+/***************FOOTER***************/
+
+.svg-inline--fa {
+vertical-align: -0.200em;
+}
+.rounded-social-buttons {
+text-align: center;
+}
+.rounded-social-buttons .social-button {
+display: inline-block;
+position: relative;
+cursor: pointer;
+width: 3.125rem;
+height: 3.125rem;
+border: 0.125rem solid transparent;
+padding: 0;
+text-decoration: none;
+text-align: center;
+color: #fefefe;
+font-size: 1.5625rem;
+font-weight: normal;
+line-height: 2em;
+border-radius: 1.6875rem;
+transition: all 0.5s ease;
+margin-right: 0.25rem;
+margin-bottom: 0.25rem;
+}
+.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+-webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+}
+.rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube {
+font-size: 25px;
+}
+
+.quizContainer {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background-color: black;
+}
+
+/******** quiz styling *********/
+
+.quizBtn {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quizQuestionsContainer {
+  height: 50vh;
+  width: 100vh;
+  border: 3px solid red;
+  display: none;
+  top: 10vh;
+  background-color: whitesmoke;
+  position: relative;
+}
+
+.quizHeader{
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: .5em;
+  color: black;
+  border: .1em solid red;
+  width: 6em;
+  height: 3em; 
+  text-align: center;
+  background-color: red;
+  color: whitesmoke;
+  font-weight: bold;
+  font-family: sans-serif;
+  border-radius: .3em;
+}
+
+.qHeadTxt {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+hr.quizHr{
+  border: 1px solid black;
+  margin-right: 2em;
+  margin-left: 2em;
+} 
+
+#question{
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  margin-top: 1em;
+
+}
+.next {
+  border-radius: 30px;
+  color: white;
+  background-color: red;
+  height: 2em;
+  width: 4em;
+  justify-items: center;
+  position: absolute;
+  bottom: .5em;
+  right: 0;
+  left: 0;
+  margin: auto;    
+}
+
+
+#movie-details-container {
+  display: none;
+  flex-flow: column;
+  align-items: center;
+}
+element {
+
+  background: rgba(0, 0, 0, 0) url("") repeat scroll 0% 0%;
+  background-size: auto;
+
+}
+.movie-image-container {
+
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: palegoldenrod;
+  background-size: cover !important;
+  box-shadow: 0px 3px 4px #bbb;
+}
+.movie-image{
+  max-width: 100%;
+  max-height: 100%;
+}
