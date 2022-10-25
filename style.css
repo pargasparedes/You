@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box; 
   font-family: sans-serif;
 }
 body {
@@ -9,11 +9,17 @@ body {
   background-image: url(Ghost.jpg);
   background-size: cover;
   background-position: center;
-}
+} */
+
 /***************NAVBAR***************/
+
 .navbar {
   height: 20vh;
   width: 100%;
+  display: flex;
+  position: fixed;
+  right: 0;
+  top: 0;
 }
 nav {
   display: flex;
@@ -26,26 +32,38 @@ nav {
 .logo a{
   color: aliceblue;
   text-decoration: none;
-  font-size: 29px;
+  font-size: 40px;
 }
 span {
   color: red;
 }
+
+nav ul {
+  display: flex;
+  gap: 15px;
+  font-size: 22px;
+};
+
 nav ul li {
   list-style-type: none;
   display: inline-block;
   padding: 10px 22px;
 }
 nav ul li a {
-  color: white;
+  color: rgb(249, 58, 19);
   text-decoration: none;
   font-weight: bold;
 }
 nav ul li a:hover {
   transition: 0.4s;
-  color: brown;
+  color: white;
+  border: solid 3px black;
+  padding: 7px;
+  background-color: rgba(0, 0, 0, 0.1);
 }
+
 /***************FOOTER***************/
+
 .svg-inline--fa {
   vertical-align: -0.2em;
 }
@@ -92,16 +110,21 @@ nav ul li a:hover {
 }
 
 footer {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%)
 }
 
-.quizBtn {
+/* .quizBtn .startBtn {
   height: 200px;
   width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .quizQuestionsContainer {
   height: 50vh;
@@ -121,9 +144,8 @@ footer {
   border: 3px solid red;
 }
 
-/* * {box-sizing:border-box} */
+/**************SLIDE SHOW CONTAINER**************/
 
-/* Slideshow container */
 .slideshow-container {
   max-width: 550px;
   position: relative;
@@ -229,7 +251,8 @@ footer {
   }
 }
 
-/* Styling In Theaters Section */
+/**************IN THEATERS**************/
+
 .inTheaters {
   height: 75vh;
   display: none;
@@ -237,7 +260,6 @@ footer {
 }
 
 .listTheaters {
-  display: flex;
   justify-content: center;
   color: white;
   display: flex;
@@ -258,7 +280,6 @@ footer {
 .popularList {
   display: none;
   grid-template-columns: 256px 256px 256px 256px 256px;
-  /* width: auto; height: 580px */
   grid-template-rows: 352px 352px;
   column-gap: 40px;
   row-gap: 40px;
@@ -326,123 +347,24 @@ hr {
 h2 {
   margin: auto;
 }
-*{
-  Padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
-
-body {
-
-  background: black;
-  background-image: url(Ghost.jpg);
-  background-size: cover;
-  background-position: center;
-
-}
-
-/***************NAVBAR***************/
-
-.navbar{
-  height: 20vh;
-  width: 100%;
-}
-nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 40px;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-.logo{
-  color: aliceblue;
-  font-size: 29px;
-}
-span{
-  color:red;
-}
-nav ul li{
-  list-style-type: none;
-  display: inline-block;
-  padding: 10px 22px;
-}
-nav ul li a{
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-nav ul li a:hover{
-  transition: .4s;
-  color: brown;
-}
-
-/***************FOOTER***************/
-
-.svg-inline--fa {
-vertical-align: -0.200em;
-}
-.rounded-social-buttons {
-text-align: center;
-}
-.rounded-social-buttons .social-button {
-display: inline-block;
-position: relative;
-cursor: pointer;
-width: 3.125rem;
-height: 3.125rem;
-border: 0.125rem solid transparent;
-padding: 0;
-text-decoration: none;
-text-align: center;
-color: #fefefe;
-font-size: 1.5625rem;
-font-weight: normal;
-line-height: 2em;
-border-radius: 1.6875rem;
-transition: all 0.5s ease;
-margin-right: 0.25rem;
-margin-bottom: 0.25rem;
-}
-.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
--webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-        transform: rotate(360deg);
-}
-.rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube {
-font-size: 25px;
-}
-
-.quizContainer {
-  height: 75vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-footer {
-  background-color: black;
-}
 
 /******** quiz styling *********/
 
-.quizBtn {
+/* .quizBtn {
   height: 200px;
   width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .quizQuestionsContainer {
-  height: 50vh;
+  height: 30vh;
   width: 100vh;
-  border: 3px solid red;
+  border: 3px solid brown;
   display: none;
   top: 10vh;
-  background-color: whitesmoke;
-  position: relative;
+  backdrop-filter: blur(20px);
 }
 
 .quizHeader{
@@ -453,15 +375,16 @@ footer {
   margin-right: auto;
   margin-bottom: .5em;
   color: black;
-  border: .1em solid red;
-  width: 6em;
-  height: 3em; 
+  border: .1em solid brown;
+  width: 10em;
+  height: 2em; 
   text-align: center;
-  background-color: red;
-  color: whitesmoke;
+  background-color: brown;
+  color: white;
   font-weight: bold;
   font-family: sans-serif;
   border-radius: .3em;
+  font-size: 20px;
 }
 
 .qHeadTxt {
@@ -470,10 +393,14 @@ footer {
 }
 
 hr.quizHr{
-  border: 1px solid black;
+  border: 1px solid brown;
   margin-right: 2em;
   margin-left: 2em;
 } 
+
+#question label {
+  color: white;
+}
 
 #question{
   justify-content: center;
@@ -481,27 +408,35 @@ hr.quizHr{
   align-items: center;
   display: flex;
   margin-top: 1em;
-
+  color: white;
+  font-size: 20px;
 }
 .next {
-  border-radius: 30px;
+  font-size: 15px;
   color: white;
-  background-color: red;
+  background-color: brown;
   height: 2em;
-  width: 4em;
-  justify-items: center;
-  position: absolute;
+  width: 6em;
+  position: relative;
   bottom: .5em;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);   
+}
+
+#shuffle-button {
+  position: relative;
+  top: 0;
   right: 0;
-  left: 0;
-  margin: auto;    
 }
 
 
 #movie-details-container {
   display: none;
-  flex-flow: column;
-  align-items: center;
+  flex-wrap: wrap;
+  height: 75vh;
+  justify-content: center;
+  color: white;
 }
 element {
 
@@ -510,15 +445,257 @@ element {
 
 }
 .movie-image-container {
-
-  width: 200px;
-  height: 300px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 550px;
   border-radius: 10px;
   background-color: palegoldenrod;
   background-size: cover !important;
-  box-shadow: 0px 3px 4px #bbb;
 }
 .movie-image{
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.movie-subdetails-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.inTheaters {
+  height: 75vh;
+  display: none;
+  justify-content: center;
+}
+/* CSS 78 Start-Button*/
+.button-78 {
+  align-items: center;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: Eina01,sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 24px;
+  margin: 0;
+  min-height: 64px;
+  outline: none;
+  overflow: visible;
+  padding: 19px 26px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  word-break: keep-all;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .button-78 {
+    padding: 19px 32px;
+  }
+}
+
+.button-78:before,
+.button-78:after {
+  border-radius: 80px;
+}
+
+.button-78:before {
+  background-image: linear-gradient(92.83deg, brown, #f93a13 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.button-78:after {
+  background-color: initial;
+  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.button-78:hover:not(:disabled):before {
+  background: linear-gradient(92.83deg, brown, rgb(249, 58, 19) 100%);
+}
+
+.button-78:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+  opacity: 0;
+}
+
+.button-78:active:not(:disabled) {
+  color: #ccc;
+}
+
+.button-78:active:not(:disabled):before {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+}
+
+.button-78:active:not(:disabled):after {
+  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.button-78:disabled {
+  cursor: default;
+  opacity: .24;
+}
+
+/* CSS 79 Shuffle-Button*/
+.button-79 {
+  align-items: center;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: Eina01,sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 24px;
+  margin: 0;
+  min-height: 64px;
+  outline: none;
+  overflow: visible;
+  padding: 10px 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  word-break: keep-all;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .button-78 {
+    padding: 19px 32px;
+  }
+}
+
+.button-79:before,
+.button-79:after {
+  border-radius: 80px;
+}
+
+.button-79:before {
+  background-image: linear-gradient(92.83deg, brown, #f93a13 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.button-79:after {
+  background-color: initial;
+  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.button-79:hover:not(:disabled):before {
+  background: linear-gradient(92.83deg, brown, rgb(249, 58, 19) 100%);
+}
+
+.button-79:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+  opacity: 0;
+}
+
+.button-79:active:not(:disabled) {
+  color: #ccc;
+}
+
+.button-79:active:not(:disabled):before {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+}
+
+.button-79:active:not(:disabled):after {
+  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.button-79:disabled {
+  cursor: default;
+  opacity: .24;
+}
+
+.button-77:before {
+  background-image: linear-gradient(92.83deg, rgb(91, 19, 19), #de705b 100%);
+}
+
+.button-77:hover:not(:disabled):before{
+  background-image: linear-gradient(92.83deg, rgb(91, 19, 19), #de705b 100%);
 }

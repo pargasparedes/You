@@ -1,12 +1,15 @@
 // Start button hide and questions appear
-$(".startBtn").click(function () {
-  document.getElementById("quizBtn").style.display = "none";
+$("#button-78").click(function () {
+  document.getElementById("button-78").style.display = "none";
+  document.getElementById("button-77").style.display = "none";
   document.getElementById("quizQuestionsContainer").style.display = "block";
+  renderQuestion();
 });
 
 // Hiding middle section to show top 10 list
 $("#topTwoFifty").click(function () {
-  document.getElementById("quizBtn").style.display = "none";
+  document.getElementById("button-78").style.display = "none";
+  document.getElementById("movie-details-container").style.display = "none";
   document.getElementById("quizContainer").style.display = "none";
   document.getElementById("mostPopular").style.display = "none";
   document.getElementById("boxOffice").style.display = "none";
@@ -16,7 +19,8 @@ $("#topTwoFifty").click(function () {
 
 // Hiding middle section to show Most Popular list
 $("#mostPopularBtn").click(function () {
-  document.getElementById("quizBtn").style.display = "none";
+  document.getElementById("button-78").style.display = "none";
+  document.getElementById("movie-details-container").style.display = "none";
   document.getElementById("quizContainer").style.display = "none";
   document.getElementById("temporary").style.display = "none";
   document.getElementById("boxOffice").style.display = "none";
@@ -27,7 +31,8 @@ $("#mostPopularBtn").click(function () {
 
 // Hiding middle section to show In Theaters list
 $("#boxOfficeBtn").click(function () {
-  document.getElementById("quizBtn").style.display = "none";
+  document.getElementById("button-78").style.display = "none";
+  document.getElementById("movie-details-container").style.display = "none";
   document.getElementById("quizContainer").style.display = "none";
   document.getElementById("temporary").style.display = "none";
   document.getElementById("mostPopular").style.display = "none";
@@ -37,13 +42,34 @@ $("#boxOfficeBtn").click(function () {
 
 // Hiding middle section to show Box Office list
 $("#inTheatersBtn").click(function () {
-  document.getElementById("quizBtn").style.display = "none";
+  document.getElementById("button-78").style.display = "none";
+  document.getElementById("movie-details-container").style.display = "none";
   document.getElementById("quizContainer").style.display = "none";
   document.getElementById("temporary").style.display = "none";
   document.getElementById("mostPopular").style.display = "none";
   document.getElementById("boxOffice").style.display = "none";
   document.getElementById("inTheaters").style.display = "block";
 });
+
+$("#button-77").click(function () {
+  document.getElementById("button-78").style.display = "none";
+  document.getElementById("movie-details-container").style.display = "flex";
+  document.getElementById("quizContainer").style.display = "none";
+  document.getElementById("mostPopular").style.display = "none";
+  document.getElementById("boxOffice").style.display = "none";
+  document.getElementById("inTheaters").style.display = "none";
+  document.getElementById("temporary").style.display = "none";
+
+  const lastUrl = localStorage.getItem('myURL');
+  console.log(lastUrl);
+  getMovie();
+});
+
+// $("#button-77").click(function () {
+//   const lastUrl = localStorage.getItem('myURL');
+//   console.log(lastUrl);
+//   getMovie(lastUrl);
+// });
 
 // -------Top 10 SlideShow Function and API calls for them-------- Start
 var slidePosition = 1;
@@ -75,7 +101,7 @@ function SlideShow(n) {
       $("#sixthMovie").attr("src", data.items[5].image);
       $("#seventhMovie").attr("src", data.items[6].image);
       $("#eighthMovie").attr("src", data.items[7].image);
-      $("#ninthMovie").attr("src", data.items[8].image);
+      $("#ninethMovie").attr("src", data.items[8].image);
       $("#tenthMovie").attr("src", data.items[9].image);
       $("#eleventhMovie").attr("src", data.items[10].image);
       $("#twelfthMovie").attr("src", data.items[11].image);
@@ -103,7 +129,7 @@ function SlideShow(n) {
   if (n < 1) {
     slidePosition = slides.length;
   }
-  for (i = 0; i < slides.length; i++) {
+  for (i = 0; i < 25; i++) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < circles.length; i++) {
@@ -184,17 +210,17 @@ var value_array = [];
 
 //***** Hides Start button and displays quiz *****
 
-$(".startBtn").click(function(){
-    document.getElementById("quizBtn").style.display = "none";
-    document.getElementById("quizQuestionsContainer").style.display = "block";
-    renderQuestion();
-});
+// $(".startBtn").click(function(){
+//     document.getElementById("quizBtn").style.display = "none";
+//     document.getElementById("quizQuestionsContainer").style.display = "block";
+//     renderQuestion();
+// });
 
 // ***** Questions Array ****
 let currentQuestion = {}
 let availableQuestions = []
-let genres = ['horror', 'comedy', 'documentary', 'drama', 
-    'family', 'fantasy', 'history', 'mystery', 'sci-fi', 'thriller']
+let genres = ['Horror', 'Comedy', 'Documentary', 'Drama', 
+    'Family', 'Fantasy', 'History', 'Mystery', 'Sci-Fi', 'Thriller']
 let years = ['2010', '2000', '1990', '1980', '1970', '1960', '1950', '1940', '1930', '1920', '1910', '1900']
 let MPAA = ['G', 'PG', 'PG-13', 'R']
 let option = []
@@ -204,10 +230,10 @@ let questions = [
         option: genres 
     },
 
-    // { 
-    //     question: 'Are you interested in a certain age of movies?',
-    //     option: years
-    // },
+    { 
+        question: 'Are you interested in a certain age of movies?',
+        option: years
+    },
        
     {
         question: 'Select all MPAA rating range G-R that you would like.',
@@ -254,6 +280,7 @@ var parent = $("<div>")
     $('<label />', { 'for': 'cb'+option, text: option }).appendTo(parent);
 
     });
+    question.append(parent);
     question.append(parent);
 }
 //***** gets value from check boxes *****
@@ -342,12 +369,22 @@ function processQuiz(answerList){
         }
         myUrl = myUrl + namey + "&"
     }
-    if(myUrl.endsWith("&")) myUrl = myUrl.slice(0,myUrl.length-1)
+    if(myUrl.endsWith("&")) {
+      myUrl = myUrl.slice(0,myUrl.length-1);
+      localStorage.setItem('myURL', myUrl);
+    };
     getMovie()
 }
+let finalUrl = '';
 
 function getMovie(){
-    fetch(myUrl)
+  document.getElementById("quizContainer").style.display = "none";
+  if (myUrl == ''){
+    finalUrl = localStorage.getItem('myURL');
+  }else {
+    finalUrl = myUrl;
+  }
+    fetch(finalUrl)
     .then(function (response){
         return response.json();
     })
