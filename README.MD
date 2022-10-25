@@ -38,7 +38,7 @@ Box Office -
 Here
 
 ### Repository 
-https://github.com/pargasparedes/Project
+https://github.com/pargasparedes/You
 
 ### Github Pages
-https://pargasparedes.github.io/Project/ 
+https://pargasparedes.github.io/You/ 
