@@ -35,8 +35,6 @@ Box Office -
 
 ![Box Office](./assets/screenshot7.png)
 
-Here
-
 ### Repository 
 https://github.com/pargasparedes/You
 
